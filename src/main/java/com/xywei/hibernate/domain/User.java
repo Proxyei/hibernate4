@@ -8,6 +8,7 @@ public class User {
 	private String username;
 	private String password;
 	private Date date;
+//	private Date login_date;
 
 	public User() {
 	}
@@ -50,6 +51,14 @@ public class User {
 	public void setDate(Date date) {
 		this.date = date;
 	}
+
+//	public Date getLogin_date() {
+//		return login_date;
+//	}
+//
+//	public void setLogin_date(Date login_date) {
+//		this.login_date = login_date;
+//	}
 
 	@Override
 	public String toString() {
