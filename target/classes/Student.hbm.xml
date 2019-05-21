@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-5-21 14:46:06 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+
+	<class name="com.xywei.hibernate.domain.Student" table="student">
+		<id name="id" type="integer" column="id" length="11">
+			<generator class="native"></generator>
+		</id>
+		<property name="username" type="string" column="username" length="100" />
+		<property name="password" type="string" column="password" length="100" />
+		<property name="date" type="date" column="date"></property>
+
+	</class>
+
+
+</hibernate-mapping>
