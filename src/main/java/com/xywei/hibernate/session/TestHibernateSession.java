@@ -54,6 +54,7 @@ public class TestHibernateSession {
 		User user = new User();
 		user.setUsername("a");
 		user.setPassword("b");
+		user.setDate(new Date());
 		session.save(user);
 		// 保存后会自动与数据库关联，这样也会自动更新数据库
 		user.setUsername("aa");
@@ -105,12 +106,13 @@ public class TestHibernateSession {
 		// session.clear();
 		// 如果与缓存数据不同，会隐式进行flush,update操作（如果没开启事务、提交事务，则不会进行update，但是会出现幻读，student2数据是错的，因为事务commit之前有flush操作）
 		// student1.setUsername("ates212t1");
-//		Student student2 = (Student) session.get(Student.class, 1);
-//		System.out.println(student2);
+		// Student student2 = (Student) session.get(Student.class, 1);
+		// System.out.println(student2);
 		// 如果使用HQL/QBC，也会发送SQL，更新缓存
-//		Query query=session.createQuery("from Student where id=?").setParameter(0, 1);
-//		Student student3=(Student) query.uniqueResult();
-//		System.out.println(student3);
+		// Query query=session.createQuery("from Student where id=?").setParameter(0,
+		// 1);
+		// Student student3=(Student) query.uniqueResult();
+		// System.out.println(student3);
 
 	}
 
