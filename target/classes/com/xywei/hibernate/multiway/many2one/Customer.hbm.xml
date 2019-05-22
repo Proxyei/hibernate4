@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.xywei.hibernate.multiway.many2one">
+
+	<class name="Customer" table="CUSTOMERS">
+
+		<id name="customerId" type="java.lang.Integer">
+			<column name="CUSTOMER_ID" />
+			<generator class="native" />
+		</id>
+
+		<property name="customerName" type="java.lang.String">
+			<column name="CUSTOMER_NAME" />
+		</property>
+
+		<!-- cascade一般不用设置，order by 使用的是数据库字段 -->
+		<set name="orders" table="ORDERS" inverse="true" cascade="delete" order-by="order_name">
+			<key column="CUSTOMER_ID_KEY">
+			</key>
+			<one-to-many class="Order" />
+		</set>
+
+	</class>
+
+</hibernate-mapping>

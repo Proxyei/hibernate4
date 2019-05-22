@@ -1,14 +1,11 @@
 package com.xywei.hibernate.oneway.many2one;
 
-import java.io.UnsupportedEncodingException;
-import java.nio.charset.Charset;
-
 import org.junit.Test;
 
 import com.xywei.hibernate.HibernateTest;
 
 /**
- * 测试单向N:1
+ * 测试单向N:1，相对论
  * 
  * @author wodoo
  *

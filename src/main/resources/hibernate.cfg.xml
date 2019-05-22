@@ -22,9 +22,11 @@
 
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
-		<mapping resource="User.hbm.xml" />
-		<mapping resource="student.hbm.xml" />
-		<mapping resource="com/xywei/hibernate/oneway/many2one/Customer.hbm.xml" />
-		<mapping resource="com/xywei/hibernate/oneway/many2one/Order.hbm.xml" />
+		<!-- <mapping resource="User.hbm.xml" /> -->
+		<!-- <mapping resource="student.hbm.xml" /> -->
+		<!-- <mapping resource="com/xywei/hibernate/oneway/many2one/Customer.hbm.xml" /> -->
+		<!-- <mapping resource="com/xywei/hibernate/oneway/many2one/Order.hbm.xml" /> -->
+		<mapping resource="com/xywei/hibernate/multiway/many2one/Customer.hbm.xml" />
+		<mapping resource="com/xywei/hibernate/multiway/many2one/Order.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>
