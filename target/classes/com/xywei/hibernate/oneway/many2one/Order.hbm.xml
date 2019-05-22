@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<!-- 不能命名为ORDER，关键字 -->
+	<class name="com.xywei.hibernate.oneway.many2one.Order" table="ORDERS">
+
+		<id name="oderId" type="java.lang.Integer">
+			<column name="ODER_ID" />
+			<generator class="native" />
+		</id>
+
+		<property name="orderName" type="java.lang.String">
+			<column name="ORDER_NAME" />
+		</property>
+		<!-- name:属性名 class:对应属性名的类 column：数据库中表的外键名 -->
+		<many-to-one name="customer" class="com.xywei.hibernate.oneway.many2one.Customer" column="CUSTOMER_ID_KEY">
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
