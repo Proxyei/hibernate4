@@ -12,9 +12,9 @@
 			<column name="TEACHER_NAME" />
 		</property>
 
-		<set name="students" table="TEACHERS_STUDENTS">
+		<set name="students" table="TEACHERS_STUDENTS" lazy="true">
 			<key column="TEACHER_ID"></key>
-			<many-to-many column="STUDENT_ID" class="Student">
+			<many-to-many column="STUDENT_ID">
 			</many-to-many>
 		</set>
 
