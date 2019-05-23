@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-5-23 13:39:16 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.xywei.hibernate.fk.one2one">
+	<class name="Manager" table="MANAGER">
+		<id name="managerId" type="java.lang.String">
+			<column name="MANAGER_ID" />
+			<generator class="uuid" />
+		</id>
+		<property name="managerName" type="java.lang.String">
+			<column name="MANAGER_NAME" />
+		</property>
+		<!-- 如果不配置 property-ref，会出现使用departmentID进行错误的映射 -->
+		<one-to-one name="department" class="Department" property-ref="manager"></one-to-one>
+	</class>
+</hibernate-mapping>

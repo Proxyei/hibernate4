@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-5-23 13:39:16 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.xywei.hibernate.fk.one2one">
+	<class name="Department" table="DEPARTMENT">
+		<id name="deptId" type="java.lang.String">
+			<column name="DEPT_ID" />
+			<generator class="uuid" />
+		</id>
+		<property name="deptName" type="java.lang.String">
+			<column name="DEPT_NAME" />
+		</property>
+
+		<many-to-one name="manager" class="Manager" column="MANAGER_ID" unique="true">
+		</many-to-one>
+
+	</class>
+</hibernate-mapping>
