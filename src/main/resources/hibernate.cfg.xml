@@ -36,11 +36,11 @@
 		<!-- <mapping resource="com/xywei/hibernate/fk/one2one/Manager.hbm.xml" /> -->
 		<!-- <mapping resource="com/xywei/hibernate/pk/one2one/Department.hbm.xml" /> -->
 		<!-- <mapping resource="com/xywei/hibernate/pk/one2one/Manager.hbm.xml" /> -->
-		<!-- <mapping resource="com/xywei/hibernate/oneway/many2many/Student.hbm.xml" /> -->
-		<!-- <mapping resource="com/xywei/hibernate/oneway/many2many/Teacher.hbm.xml" /> -->
+		<mapping resource="com/xywei/hibernate/oneway/many2many/Student.hbm.xml" />
+		<mapping resource="com/xywei/hibernate/oneway/many2many/Teacher.hbm.xml" />
 		<!-- <mapping resource="com/xywei/hibernate/multiway/many2many/Student.hbm.xml" /> -->
 		<!-- <mapping resource="com/xywei/hibernate/multiway/many2many/Teacher.hbm.xml" /> -->
-		<mapping resource="com/xywei/hibernate/ehcache/Manager.hbm.xml" />
-		<mapping resource="com/xywei/hibernate/ehcache/Department.hbm.xml" />
+		<!-- <mapping resource="com/xywei/hibernate/ehcache/Manager.hbm.xml" /> -->
+		<!-- <mapping resource="com/xywei/hibernate/ehcache/Department.hbm.xml" /> -->
 	</session-factory>
 </hibernate-configuration>

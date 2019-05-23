@@ -4,6 +4,8 @@
 <!-- Generated 2019-5-23 15:58:34 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping package="com.xywei.hibernate.oneway.many2many">
 	<class name="Student" table="STUDENT">
+		<!-- 设置类级别缓存 -->
+		<cache usage="read-write" />
 		<id name="studentId" type="java.lang.Integer">
 			<column name="STUDENT_ID" />
 			<generator class="native" />

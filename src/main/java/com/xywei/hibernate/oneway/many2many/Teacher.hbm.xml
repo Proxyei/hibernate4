@@ -4,6 +4,8 @@
 <!-- Generated 2019-5-23 15:58:34 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping package="com.xywei.hibernate.oneway.many2many">
 	<class name="Teacher" table="TEACHER">
+		<!-- 设置类级别缓存 -->
+		<cache usage="read-write" />
 		<id name="teacherId" type="java.lang.Integer">
 			<column name="TEACHER_ID" />
 			<generator class="native" />
@@ -13,6 +15,8 @@
 		</property>
 
 		<set name="students" table="teachers_students">
+			<!-- 设置集合级别缓存，同时也要设置属性对应类型的类缓存，如果不设置，则会多发送根据ID查询的SQL -->
+			<cache usage="read-write" />
 			<key column="TEACHER_ID"></key>
 			<many-to-many column="STUDENT_ID" class="Student">
 			</many-to-many>

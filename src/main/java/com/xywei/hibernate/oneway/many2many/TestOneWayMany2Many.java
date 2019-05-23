@@ -33,6 +33,18 @@ public class TestOneWayMany2Many extends HibernateTest {
 		System.out.println("教师名字：" + teacher.getTeacherName());
 		System.out.println("学生有" + teacher.getStudents());
 
+		transaction.commit();
+		session.close();
+		session = sessionFactory.openSession();
+		transaction = session.beginTransaction();
+
+		System.out.println("测试集合类缓存====================================");
+		Teacher teacher2 = (Teacher) session.get(Teacher.class, 1);
+		System.out.println("教师名字：" + teacher2.getTeacherName());
+		System.out.println("学生有" + teacher2.getStudents());
+		transaction.commit();
+		session.close();
+
 	}
 
 }
