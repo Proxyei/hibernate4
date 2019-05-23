@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-5-23 13:39:16 by Hibernate Tools 3.5.0.Final -->
+
+<hibernate-mapping package="com.xywei.hibernate.pk.one2one">
+
+	<class name="Manager" table="MANAGER">
+		<!-- 使用外键方式生成主键 -->
+		<id name="managerId" type="java.lang.String">
+			<column name="MANAGER_ID" />
+			<generator class="foreign">
+				<param name="property">department</param>
+			</generator>
+		</id>
+		<property name="managerName" type="java.lang.String">
+			<column name="MANAGER_NAME" />
+		</property>
+
+		<one-to-one name="department" class="Department" constrained="true"></one-to-one>
+
+	</class>
+
+</hibernate-mapping>
