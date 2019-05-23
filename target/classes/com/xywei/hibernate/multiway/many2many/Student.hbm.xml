@@ -13,7 +13,7 @@
 		</property>
 
 		<!-- 由教师表维护关联关系 -->
-		<set name="teachers" table="TEACHERS_STUDENTS" inverse="true">
+		<set name="teachers" table="TEACHERS_STUDENTS" inverse="true" >
 			<key>
 				<column name="STUDENT_ID"></column>
 			</key>
