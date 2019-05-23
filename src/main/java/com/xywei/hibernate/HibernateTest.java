@@ -30,8 +30,8 @@ public class HibernateTest {
 
 	@After
 	public void destory() {
-		transaction.commit();
-		session.close();
+//		transaction.commit();
+//		session.close();
 		sessionFactory.close();
 	}
 
