@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2019-5-23 15:58:34 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.xywei.hibernate.oneway.many2many">
+	<class name="Teacher" table="TEACHER">
+		<id name="teacherId" type="java.lang.Integer">
+			<column name="TEACHER_ID" />
+			<generator class="native" />
+		</id>
+		<property name="teacherName" type="java.lang.String">
+			<column name="TEACHER_NAME" />
+		</property>
+
+		<set name="students" table="teachers_students">
+			<key column="TEACHER_ID"></key>
+			<many-to-many column="STUDENT_ID" class="Student">
+			</many-to-many>
+		</set>
+
+	</class>
+</hibernate-mapping>

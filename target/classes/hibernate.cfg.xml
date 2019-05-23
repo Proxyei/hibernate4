@@ -30,7 +30,9 @@
 		<!-- <mapping resource="com/xywei/hibernate/multiway/many2one/Order.hbm.xml" /> -->
 		<!-- <mapping resource="com/xywei/hibernate/fk/one2one/Department.hbm.xml" /> -->
 		<!-- <mapping resource="com/xywei/hibernate/fk/one2one/Manager.hbm.xml" /> -->
-		<mapping resource="com/xywei/hibernate/pk/one2one/Department.hbm.xml" />
-		<mapping resource="com/xywei/hibernate/pk/one2one/Manager.hbm.xml" />
+		<!-- <mapping resource="com/xywei/hibernate/pk/one2one/Department.hbm.xml" /> -->
+		<!-- <mapping resource="com/xywei/hibernate/pk/one2one/Manager.hbm.xml" /> -->
+		<mapping resource="com/xywei/hibernate/oneway/many2many/Student.hbm.xml" />
+		<mapping resource="com/xywei/hibernate/oneway/many2many/Teacher.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>
