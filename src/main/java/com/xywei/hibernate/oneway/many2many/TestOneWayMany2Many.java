@@ -45,6 +45,10 @@ public class TestOneWayMany2Many extends HibernateTest {
 		transaction.commit();
 		session.close();
 
+		System.out.println(System.getProperty("java.io.tmpdir"));
+		System.out.println(System.getProperty("user.home"));
+		System.out.println(System.getProperty("user.dir"));
+
 	}
 
 }
